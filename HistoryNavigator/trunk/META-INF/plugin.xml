@@ -1,0 +1,28 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin>
+  <name>HistoryNavigator</name>
+  <description>Shows back and forward locations lists for navigation like in web browsers</description>
+  <version>0.6</version>
+  <vendor email="kashin_d@hotmail.ru">Dmitry Kashin</vendor>
+  <change-notes><![CDATA[<ul>
+        <li> 0.6 </li>
+        <ul>
+          <li> Moved to Idea 6.0 Open API</li>
+        </ul>
+    </ul>]]>
+  </change-notes>
+
+  <idea-version since-build="3000" until-build="5000"/>
+    <actions>
+        <action id="BACK_HISTORY_LIST" class="org.jetbrains.contest.historyNavigator.BackHistoryListAction" text="Show previously visited locations list"
+                description="Show previously visited locations" icon="/actions/get.png">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt LEFT"/>
+            <add-to-group group-id="MainToolBar" anchor="before" relative-to-action="Back"/>
+        </action>
+        <action id="FORWARD_HISTORY_LIST" class="org.jetbrains.contest.historyNavigator.ForwardHistoryListAction" text="Show next visited locations list"
+                description="Show next visited locations list"  icon="/actions/get.png">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt RIGHT"/>
+            <add-to-group group-id="MainToolBar" anchor="after" relative-to-action="Forward"/>
+        </action>
+    </actions>
+</idea-plugin>
