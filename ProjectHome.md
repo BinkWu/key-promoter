@@ -1,0 +1,1 @@
+Plugin for IntellijIDEA for showing shortcuts in case of mouse usage
